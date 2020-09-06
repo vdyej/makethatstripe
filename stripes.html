@@ -14,7 +14,7 @@
             }
 
             #boxybordercontainer div{
-                background-color: hotpink;
+                background-color: white;
                 width:1%;
                 height: 50px;
                 
@@ -46,12 +46,14 @@
                 border: 30px solid white;
                 display: flex;
                 flex-wrap: no-wrap; 
+                
             }
 
             #boxycontainer > div {
                 background-color: hotpink;
                 width:4%;
                 height: 130px;
+                cursor: grab;
 
 
             }
@@ -63,11 +65,12 @@
             button {
                 background-color: ghostwhite;
                 text-transform: capitalize;
-                padding: 10px 20px;
+                padding: 8px 10px;
                 border-radius: 5px;
                 font-family: sans-serif;
-                font-size: 1.3em;
+                font-size: .8em;
                 border-style: groove;
+                display: inline;
 
             }
 
@@ -75,6 +78,11 @@
                 background-color: rgb(161, 183, 206);
                 color: white;
             } 
+
+            button.theme {
+                font-size:.9em;
+                margin: 0px 30px;
+            }
 
             p.heading {
                 font-size: 2em;
@@ -94,12 +102,59 @@
                 margin: 8px 2px;
                 width: 50%;
                 color: ghostwhite;
+                padding: 10px;
 
             }
 
+            ul {
+                /* background-color: ghostwhite; */
+                width: 95%;
+                margin: auto;
+                /* border: 1px solid lightsteelblue;  */
+                border-radius: 5px;
+                list-style-type: none;
+                /* color:rgb(31, 35, 71); */
+                color: white;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.3em;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+            }
+
+            li {
+                width:300px; 
+                /* border:rgb(31, 35, 71) solid 1px;
+                background-color: lightsteelblue; */
+                margin: 7px 10px;
+
+            }
+
+            @media (max-width:4000px) {
+                ul {
+                    /* color: green; */
+                    /* width: 100%; */
+                }
+            }
+
+            @media (max-width: 1420px) {
+                ul {
+                    /* color: yellow; */
+                    width: 65%;
+                }
+            }
+
+            @media (max-width:1082px) {
+                ul {
+                    /* color: red; */
+                    /* width: 100%; */
+                }
 
 
 
+            }
         </style>
     </head>
     <body>
@@ -117,6 +172,68 @@
 
          
         <p class=heading><em>1. MAKE</em> that stripe!</p>
+<p class=subparagraph>Select a palette <br><br>
+
+<form>
+    
+<ul>
+        
+    
+
+                <li>
+                    <input class=radiobutton onclick="chooseGrunge()" type="radio" id="grunge" name="theme" value="grunge" checked>
+                    <label class="radiolist" for="grunge">Grunge</label><br>
+                </li>
+
+        
+    
+      
+
+            <li>
+                <input type="radio" onclick="chooseRainbow()" id="rainbow" name="theme" value="rainbow">
+                <label class="radiolist" for="rainbow">Rainbow</label><br>
+            </li>
+
+            
+            <li>
+                <input  type="radio" onclick="chooseRain()" id="rain" name="theme" value="rain">
+                <label class="radiolist" for="rain">Rain</label><br>
+            </li>
+            
+
+            <li>
+                <input  type="radio" onclick="choosePinkSunshine()" id="pinksunshine" name="theme" value="pinksunshine">
+                <label class="radiolist" for="pinksunshine">Pink Sunshine</label><br>
+            </li>
+
+
+            <li>
+                <input  type="radio" onclick="chooseNeonYeti()" id="neonyeti" name="theme" value="neonyeti">
+                <label class="radiolist" for="neonyeti">Neon Yeti</label><br>
+            </li>
+
+
+            <li>
+                <input  type="radio" onclick="chooseLickableWallpaper()" id="lickablewallpaper" name="theme" value="lickablewallpaper">
+                <label class="radiolist" for="lickablewallpaper">Fruit Wallpaper</label><br>
+            </li>
+
+
+            <li>
+                <input  type="radio" onclick="choosePhoto()" id="photo" name="theme" value="photo">
+                <label class="radiolist" for="photo">70s photo</label><br>
+            </li>
+
+
+            <li>
+                <input  type="radio" onclick="chooseMarket()" id="market" name="theme" value="market">
+                <label class="radiolist" for="market">Farmers Market</label><br>
+            </li>
+            
+</ul>
+<!-- <input type="button" onclick="getRadioSelection()" value="Get Stripes"></input> -->
+
+</form>
 </div>
 
 
@@ -126,11 +243,10 @@
 
 
 <div class=maincontent>
-    <p class="subparagraph">Click on any bar to randomly change its color OR </p>
-    <button onclick=regenerateColors()>Remix Entire Pattern</button>
+    <p class="subparagraph">Click on any bar to randomly change its color OR 
+    <button onclick=regenerateColors()>Remix Entire Pattern</button> </p>
 
-        <p class=heading><em>2. NAME</em> that stripe!</p>
-        <p class=heading><em>3. DOWNLOAD</em> that stripe!</p>
+        <p class=heading><em>2. TAKE</em> that stripe!</p>
    
    
     </div>
